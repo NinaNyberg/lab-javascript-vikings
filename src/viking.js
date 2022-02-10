@@ -50,6 +50,7 @@ class War {
   constructor() {
     this.vikingArmy = [];
     this.saxonArmy = [];
+    this.randomArmy = [];
   }
 
   addViking(Viking) {
@@ -79,7 +80,30 @@ class War {
     // this.vikingArmy.pop(randomV);
     return vikingDamage;
   }
-  // showStatus()
+
+  // attacK(soldier1, soldier2) {
+  //   let randomSoldier =
+  //     this.randomArmy[Math.floor(Math.random() * this.randomArmy.length)];
+  //   let randomSoldierDamage = randomSoldier.receiveDamage(
+  //     randomSoldier.strength
+  //   );
+  //   if (soldier1.health <= 0) {
+  //     this.randomArmy = this.randomArmy.filter((item) => item !== soldier1);
+  //   } else {
+  //     this.randomArmy = this.randomArmy.filter((item) => item !== soldier2);
+  //   }
+  //   return randomSoldierDamage;
+  // }
+
+  showStatus() {
+    if (this.saxonArmy.length === 0) {
+      return 'Vikings have won the war of the century!';
+    } else if (this.vikingArmy.length === 0) {
+      return 'Saxons have fought for their lives and survived another day...';
+    } else {
+      return 'Vikings and Saxons are still in the thick of battle.';
+    }
+  }
 }
 
 // The following is required to make unit tests work.
